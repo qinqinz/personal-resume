@@ -20,7 +20,7 @@ webpack template 查阅相关资料
 #### 4、npm install file-loader --save-dev  打包图片
   ```
   {
-  test: /\.(png | jpg | gif | svg )$/i,
+  test: /\.(png | jpg | gif | svg )$/,
   loader: 'file-loader',
   query: { name: '图片名'}
   }
@@ -30,7 +30,7 @@ webpack template 查阅相关资料
 #### 5、 npm install url-loader --save-dev  安装url-loader 处理文件、图片大小 ， base64 or http请求，小于一定大小的图片转成base64
 ```
   {
-  test: /\.(png | jpg | gif | svg )$/i,
+  test: /\.(png | jpg | gif | svg )$/,
   loader: 'url-loader',
   query: { name: '图片名'，limit:20000}
   }
@@ -39,7 +39,7 @@ webpack template 查阅相关资料
  
  ```
    {
-   test: /\.(png | jpg | gif | svg )$/i,
+   test: /\.(png | jpg | gif | svg )$/,
    loaders:[ 'url-loader?limit=20000', image-webpack]
    }
    ```
