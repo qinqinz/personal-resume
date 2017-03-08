@@ -21,6 +21,16 @@ module.exports = {
             loader: 'css-loader'
           },
           {
+            loader: 'postcss-loader',
+            options: {
+              plugins: function () {
+                return [
+                  require('autoprefixer')
+                ];
+              }
+            }
+          },
+          {
             loader: 'sass-loader'
           }
           ]
@@ -39,7 +49,6 @@ module.exports = {
       }
     ]
   },
-
   plugins: [
     new htmlWebpackPlugin ({  //多页面 多个htmlWebpackPlugin
       template: 'index.html',
